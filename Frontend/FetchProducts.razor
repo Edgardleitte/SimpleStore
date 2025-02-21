@@ -11,7 +11,10 @@ else
     <ul>
         @foreach (var product in products)
         {
-            <li>@product.Name - $@product.Price (@product.Category.Name)</li>
+            <li>
+                @product.Name - $@product.Price (@product.Category.Name)
+                <button onclick="showAlert('Added: @product.Name')">Add to Cart</button>
+            </li>
         }
     </ul>
 }
